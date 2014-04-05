@@ -1,5 +1,3 @@
-// If you have JDK 7 and not JDK 8 then replace all three instances of the number 8 to the number 7
-
 organization := "com.bryantomlin"
 
 name := "changeMe"
@@ -8,7 +6,7 @@ version := "0.0.1"
 
 scalaVersion := "2.10.4"
 
-scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.8", "-unchecked",
+scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.7", "-unchecked",
     "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
 
 scalacOptions in (Compile, doc) <++= baseDirectory.map {
@@ -18,7 +16,7 @@ scalacOptions in (Compile, doc) <++= baseDirectory.map {
   )
 }
 
-javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.8", "-target", "1.8", "-g:vars")
+javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.7", "-target", "1.7", "-g:vars")
 
 resolvers ++= Seq(
   "Typesafe Releases"   at "http://repo.typesafe.com/typesafe/releases"
