@@ -27,6 +27,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 //  "org.scalatest"           %% "scalatest"     % "2.0" % "test" withSources,
 //  "com.github.nscala-time"  %% "nscala-time"   % "0.6.0" withSources
+ "org.scalatest"           %% "scalatest"     % "2.1.0" % "test"
 )
 
 logLevel := Level.Warn
