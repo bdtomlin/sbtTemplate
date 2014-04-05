@@ -1,24 +1,24 @@
-// If you have JDK 6 and not JDK 7 then replace all three instances of the number 7 to the number 6
+// If you have JDK 7 and not JDK 8 then replace all three instances of the number 8 to the number 7
 
-organization := "com.micronautics"
+organization := "com.bryantomlin"
 
 name := "changeMe"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.0.1"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
-scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.7", "-unchecked",
+scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.8", "-unchecked",
     "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
 
 scalacOptions in (Compile, doc) <++= baseDirectory.map {
   (bd: File) => Seq[String](
      "-sourcepath", bd.getAbsolutePath,
-     "-doc-source-url", "https://github.com/mslinn/changeMe/tree/master€{FILE_PATH}.scala"
+     "-doc-source-url", "https://github.com/bdtomlin/changeMe/tree/master€{FILE_PATH}.scala"
   )
 }
 
-javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.7", "-target", "1.7", "-g:vars")
+javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.8", "-target", "1.8", "-g:vars")
 
 resolvers ++= Seq(
   "Typesafe Releases"   at "http://repo.typesafe.com/typesafe/releases"
@@ -40,5 +40,3 @@ initialCommands := """
 logLevel in compile := Level.Warn
 
 cancelable := true
-
-sublimeTransitive := true
